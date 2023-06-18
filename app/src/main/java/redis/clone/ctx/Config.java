@@ -26,8 +26,8 @@ public class Config {
         configFromFile = file;
     }
 
-    public static String get(String key) {
-        String valueFromEnv = configFromEnv.get(key);
+    public static Object get(String key) {
+        Object valueFromEnv = configFromEnv.get(key);
         if(valueFromEnv == null){
             return configFromFile.get(key);
         }

@@ -27,14 +27,14 @@ class ConfigTest {
     @Test
     void shouldGetConfigValueFromEnvironment() {
         String expectedConfigValue = "SOME-VALUE-ENV";
-        String actualConfigValue = Config.get("SOME-COMMON-KEY");
+        String actualConfigValue = (String) Config.get("SOME-COMMON-KEY");
         assertEquals(expectedConfigValue, actualConfigValue);
     }
 
     @Test
     void shouldGetConfigValueFromFile() {
         String expectedConfigValue = "SOME-VALUE-FILE";
-        String actualConfigValue = Config.get("SOME-KEY-FILE");
+        String actualConfigValue = (String) Config.get("SOME-KEY-FILE");
         assertEquals(expectedConfigValue, actualConfigValue);
     }
 }
